@@ -6,7 +6,7 @@ use Controllers\BillController;
 use Actions\Cart\AddProductToCart;
 use Actions\Cart\SetCurrentCurrency;
 
-class CreateCart
+class CreateCart implements CommandInterface
 {
     /**
      * @var [Controller]
