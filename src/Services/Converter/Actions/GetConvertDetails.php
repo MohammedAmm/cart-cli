@@ -19,7 +19,7 @@ class GetConvertDetails
     {
         //Hult if currency not exists
         if (empty($currencyArray=Currency::searchStockForKey($name))) {
-            die("Not valide currency");
+            die("Not valide currency\n");
         }
         //Return with currency details
         return $currencyArray;

@@ -9,7 +9,12 @@ namespace Models;
 class Product extends BaseModel
 {
     private $name, $price, $discount, $count = 0;
-
+    /**
+     * Only available keys to create object from.
+     *
+     * @var array
+     */
+    private $fillable=["name", "price", "discount", "count"];
     /**
      * Getters
      */
@@ -56,6 +61,9 @@ class Product extends BaseModel
     {
         $product = new self;
         foreach ($data as $key => $value) {
+            if (!in_array($key,$product->fillable)) {
+              die("Can't not init data, invalid key!\n");
+            }
             $product->$key = $value;
         }
         $product->increaseCount();

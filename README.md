@@ -27,10 +27,14 @@ based on user choice.
 * Composer install
 * To use the available command.
     * `php index.php createCart --bill-currency=EGP T-shirt T-shirt shoes`
+* To run test cases.
+    * `./vendor/bin/phpunit`
 
 ## Assumptions
 * Our shop decide if you buy item that have both discount and offer, will apply the offer because it has the higher percent.
 * For simplicity using json files to store: special offers, products and currencies.
+* Application will hult and print message if there any error, instead of raising exception to user, No error handler.
+* Models doesn't have validations because the user doesn't deal with it directly should go though actions there the program    validate each part. 
 
 ## Modifications to handle later
 * Add unit tests.
