@@ -10,6 +10,17 @@ based on user choice.
 * Calculate subtotal, taxes, discounts including offers and total.
 * Return required format and handle direction.
 
+## Architecture
+* Using MVC Design to divide the program logic into three interconnected elements. 
+* Model Handle only data.
+* Controller Handle only requests and return response.
+* Views get data from controller to display.
+* Additional layers:
+    * User doesn't deal directly with controllers there is a command layer working as dispatcher.
+    * Actions to stick to solid principles as much as possible, the program core functionality divider to actions
+        each one of them has one thing to do.
+    * Services has simple converter to convert currency based on currencies exists on "currencies.json" file.
+    * Use json files as database store for simplicity and seperation.
 
 ## Steps to run project
 * Clone project.
