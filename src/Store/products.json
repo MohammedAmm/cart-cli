@@ -1,0 +1,24 @@
+{
+    "products": [{
+            "name": "T-shirt",
+            "price": "10.99",
+            "discount": "0"
+        },
+        {
+            "name": "Pants",
+            "price": "14.99",
+            "discount": "0"
+        },
+        {
+            "name": "Jacket",
+            "price": "19.99",
+            "discount": "0"
+        },
+        {
+            "name": "Shoes",
+            "price": "24.99",
+            "discount": "10"
+        }
+
+    ]
+}

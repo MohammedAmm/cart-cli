@@ -1,0 +1,15 @@
+{
+    "name": "mohamed/simplecart",
+    "description": "Shopping cart using console application",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Mohamed Ashraf",
+            "email": "mohammed.ashraaf.ma@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": { "": "src/" }
+    }
+}

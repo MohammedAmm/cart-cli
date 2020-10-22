@@ -1,0 +1,10 @@
+{
+    "offers": [{
+            "item_name": "T-shirt",
+            "item_count": "2",
+            "apply_on_item": "Jacket",
+            "apply_on_count": "1",
+            "apply_percent": "50"
+        }
+    ]
+}

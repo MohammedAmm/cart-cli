@@ -1,0 +1,14 @@
+{
+    "currencies": [{
+            "name":"USD",
+            "symbol": "$",
+            "rate_to_dollar": "1",
+            "direction": "l"
+        },{
+            "name":"EGP",
+            "symbol": "e£",
+            "rate_to_dollar": "15.70",
+            "direction": "r"
+        }
+    ]
+}
