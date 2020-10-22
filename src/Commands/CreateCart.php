@@ -36,12 +36,18 @@ class CreateCart implements CommandInterface
 
     public function handle($argv)
     {
-        //Get currency from command
-        $currencyName = $this->getCurrency($argv[2]);
-        $this->setCurrencyAction->execute($currencyName,$this->cart);
+        //Get items start index in command line
+        $itemIndex = $this->getItemStartIndex($argv[2]);
+
+        //Set currency only if option passed.
+        if ($itemIndex == 3) {
+            $currencyName = $this->getCurrency($argv[2]);
+            $this->setCurrencyAction->execute($currencyName,$this->cart);
+        }
+
 
         //Get request from command and handle to controller
-        for ($i = 3; $i < sizeof($argv); $i++) {
+        for ($i = $itemIndex; $i < sizeof($argv); $i++) {
             $this->addProdcutToCart($argv[$i]);
         }
         //Init cart with productis
@@ -66,5 +72,12 @@ class CreateCart implements CommandInterface
         //Array[1] should have the currency
         //Ignore case senstivity
         return strtoupper($array[1]);
+    }
+    private function getItemStartIndex(string $argumentText):int
+    {    
+        if (strpos($argumentText, '--') !== false) {
+            return 3;
+        }
+        return 2;
     }
 }
