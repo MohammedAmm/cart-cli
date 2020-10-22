@@ -35,6 +35,7 @@ based on user choice.
 * For simplicity using json files to store: special offers, products and currencies.
 * Application will hult and print message if there any error, instead of raising exception to user, No error handler.
 * Models doesn't have validations because the user doesn't deal with it directly should go though actions there the program    validate each part. 
+* To stick to solid and return the final output like the given one it took time, the code have many parts to enhance.
 
 ## Modifications to handle later
 * Add unit tests.
